@@ -1,6 +1,6 @@
 % elias-cv.cls - Custom CV class
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{elias-cv}[2024/06/13 Custom CV class]
+\ProvidesClass{elias-cv}[2025/09/19 Custom CV class]
 
 % Load base class
 \LoadClass[a4paper,12pt]{article}
