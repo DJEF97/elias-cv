@@ -1,0 +1,59 @@
+% elias-cv.sty - Custom LaTeX style for CVs
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{elias-cv}[2024/06/10 Custom CV style]
+
+% Load required packages
+\RequirePackage{geometry}
+\RequirePackage{fontspec}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{xcolor}
+
+% Page geometry
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Font setup (for XeLaTeX/LuaLaTeX)
+\setmainfont{TeX Gyre Heros}
+
+% Section formatting
+\titleformat{\section}
+    {\color{blue}\normalfont\Large\bfseries}
+    {}{0pt}{}
+
+% Custom itemize style
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+% Name command
+\newcommand{\cvname}[1]{%
+    \begin{center}
+        {\Huge\bfseries #1}
+    \end{center}
+}
+
+% Contact info command
+\newcommand{\cvcontact}[1]{%
+    \begin{center}
+        #1
+    \end{center}
+}
+
+% Experience entry command
+\newcommand{\cvexperience}[4]{%
+    \textbf{#1} \hfill {\small #2}\\
+    {\em #3}\\
+    #4\vspace{0.5em}
+}
+
+% Education entry command
+\newcommand{\cveducation}[4]{%
+    \textbf{#1} \hfill {\small #2}\\
+    {\em #3}\\
+    #4\vspace{0.5em}
+}
